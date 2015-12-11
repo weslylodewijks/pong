@@ -10,7 +10,7 @@ package actors
 	{
 		private var controller:Controller;
 		private var speed:Number = 0;
-		private var maxSpeed:Number = 10;
+		private var maxSpeed:Number = 31;
 		
 		public function Player() 
 		{
@@ -45,6 +45,17 @@ package actors
 			this.y += speed;
 		}
 		
+		public function get maximumSpeed():Number
+		{
+			return maxSpeed;
+		}
+		
+		public function set maximumSpeed(speed:Number):void
+		{
+			maxSpeed = speed;
+			if (speed > 30)
+			trace("maxspeed is higher then 30 mate, that is to high.")
+		}
 	}
 
 }
